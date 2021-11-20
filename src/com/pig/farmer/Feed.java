@@ -2,28 +2,29 @@ package com.pig.farmer;
 
 public class Feed {
 
-    private static int feedAmount = 0;
-
     public String name;
-
-    public static int getAmount() {
-        return feedAmount;
-    }
+    private boolean isFull;
+    private double weight;
 
     public void consume() {
-        if(feedAmount == 0) {
-            System.out.println("Can't feed animal because feed is equal to 0");
-        } else {
-            feedAmount -= 1;
-        }
+        isFull = false;
     }
 
-    public void addFeed(int bins) {
-        feedAmount += bins;
+    public boolean isFull() {
+        return isFull;
     }
 
-    public Feed(String name, int bins) {
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
+    }
+
+    public Feed(String name, boolean isFull, double weight) {
         this.name = name;
-        this.addFeed(bins);
+        this.isFull = isFull;
+        this.weight = weight;
     }
 }

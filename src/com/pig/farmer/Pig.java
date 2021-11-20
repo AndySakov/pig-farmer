@@ -1,16 +1,15 @@
 package com.pig.farmer;
 
 public class Pig {
-    private static int count = 0;
     private String color;
+    private String PigID;
     private String name;
     private boolean isFemale;
+    private boolean isFed = false;
 
-    public static int getCount() {
-        return count;
-    }
 
-    public Pig(String name, String color, boolean isFemale) {
+    public Pig(String PigID, String name, String color, boolean isFemale) {
+        this.PigID = PigID;
         this.name = name;
         this.color = color;
         this.isFemale = isFemale;
@@ -18,5 +17,6 @@ public class Pig {
 
     public void feed(Feed food) {
         food.consume();
+        isFed = true;
     }
 }
