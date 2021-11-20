@@ -44,7 +44,10 @@ public class Farmer {
         System.out.println();
     }
     public static void report() {
-        System.out.println("This operation is not supported at this time!\n");
+        System.out.println("Pig Farm Report");
+        System.out.println("Number of pigs: " + piggies.getPigCount());
+        System.out.println("Number of feed bins: " + feeds.getNumberOfFullBins());
+        System.out.println();
     }
 
 
